@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.roof.report.report01.dao">
+	<sql id="columns">
+		i.id, i.name, i.key, i.resultType, i.isShow
+	</sql>
+	<sql id="conditions">
+		<if test="id != null">
+			and t.id = #{id}
+		</if>
+		<if test="value != null">
+			and t.value = #{value}
+		</if>
+		<if test="name != null">
+			and t.name = #{name}
+		</if>
+	</sql>
+	
+	<select id="get" parameterType="java.util.Map"  resultType="map">
+		select * from s_user
+	</select>
+	
+</mapper>

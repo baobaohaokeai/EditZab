@@ -1,0 +1,1215 @@
+@charset "UTF-8";
+/* line 2, app/styles/reset.scss */
+body, button, input, select, textarea {
+  -webkit-font-smoothing: antialiased;
+  font: 12px "Lantinghei SC","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif;
+}
+
+/* line 6, app/styles/reset.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, iframe, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 10, app/styles/reset.scss */
+fieldset, img, iframe {
+  border: 0;
+  text-decoration: none;
+}
+
+/* line 14, app/styles/reset.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 17, app/styles/reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 20, app/styles/reset.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 23, app/styles/reset.scss */
+caption, th {
+  text-align: left;
+}
+
+/* line 26, app/styles/reset.scss */
+header, footer, article, section, nav {
+  display: block;
+}
+
+/* line 29, app/styles/reset.scss */
+em {
+  font-style: normal;
+}
+/* line 4, app/styles/app.scss */
+body {
+  overflow-x: hidden;
+  color: #3b3b3b;
+  background-color: #efeff4;
+}
+
+/* line 9, app/styles/app.scss */
+a {
+  text-decoration: none;
+  font-size: 12px;
+}
+/* line 12, app/styles/app.scss */
+a:link, a:visited {
+  color: #3b3b3b;
+}
+/* line 15, app/styles/app.scss */
+a:hover {
+  color: #87bb12;
+  cursor: pointehoverr;
+}
+
+/* line 20, app/styles/app.scss */
+.font-gray {
+  text-decoration: none;
+  font-size: 12px;
+  color: #3b3b3b;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+/* line 26, app/styles/app.scss */
+.font-gray:link, .font-gray:visited {
+  color: #3b3b3b;
+}
+/* line 29, app/styles/app.scss */
+.font-gray:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* line 34, app/styles/app.scss */
+input {
+  padding: 0 2px;
+  height: 26px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 12px;
+}
+/* line 41, app/styles/app.scss */
+input.read-only {
+  background-color: white;
+}
+/* line 43, app/styles/app.scss */
+input.read-only:focus {
+  box-shadow: none;
+  border: 1px solid white;
+}
+
+/* line 50, app/styles/app.scss */
+select {
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* line 58, app/styles/app.scss */
+textarea {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* line 64, app/styles/app.scss */
+.fl {
+  float: left;
+}
+
+/* line 67, app/styles/app.scss */
+.fr {
+  float: right;
+}
+
+/* line 70, app/styles/app.scss */
+.wrapper {
+  width: 100%;
+  padding-bottom: 98px;
+}
+
+/* line 74, app/styles/app.scss */
+.tab-bar {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #dedede;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 84, app/styles/app.scss */
+.tab-bar ul {
+  *zoom: 1;
+}
+/* line 6, app/styles/_common.scss */
+.tab-bar ul:before, .tab-bar ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, app/styles/_common.scss */
+.tab-bar ul:after {
+  clear: both;
+}
+/* line 87, app/styles/app.scss */
+.tab-bar ul li {
+  float: left;
+  width: 50%;
+}
+/* line 90, app/styles/app.scss */
+.tab-bar ul li em.icon-home,
+.tab-bar ul li em.icon-user,
+.tab-bar ul li em.icon-record {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin: 4px auto 2px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+/* line 101, app/styles/app.scss */
+.tab-bar ul li em.icon-home {
+  background: url(../images/home-gray.png) no-repeat;
+}
+/* line 104, app/styles/app.scss */
+.tab-bar ul li em.icon-user {
+  background: url(../images/user-gray.png) no-repeat;
+}
+/* line 107, app/styles/app.scss */
+.tab-bar ul li em.icon-record {
+  background: url(../images/record-gray.png) no-repeat;
+}
+/* line 110, app/styles/app.scss */
+.tab-bar ul li p {
+  text-align: center;
+}
+/* line 114, app/styles/app.scss */
+.tab-bar ul li.cur em.icon-home {
+  background: url(../images/home-green.png) no-repeat;
+}
+/* line 117, app/styles/app.scss */
+.tab-bar ul li.cur em.icon-user {
+  background: url(../images/user-green.png) no-repeat;
+}
+/* line 120, app/styles/app.scss */
+.tab-bar ul li.cur em.icon-record {
+  background: url(../images/record-green.png) no-repeat;
+}
+/* line 123, app/styles/app.scss */
+.tab-bar ul li.cur p {
+  color: #87bb12;
+}
+
+/* line 130, app/styles/app.scss */
+.nav {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dedede;
+}
+/* line 136, app/styles/app.scss */
+.nav.green {
+  background-color: #87bb12;
+  color: white;
+}
+/* line 140, app/styles/app.scss */
+.nav .return {
+  float: left;
+  width: 12px;
+  height: 20px;
+  margin: 12px 0 0 9px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/return.png) no-repeat;
+}
+/* line 149, app/styles/app.scss */
+.nav .return.bg-gray {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+  -webkit-filter: grayscale(1);
+}
+/* line 150, app/styles/app.scss */
+.nav .close {
+  float: left;
+  width: 18px;
+  height: 18.5px;
+  margin: 12px 0 0 9px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/icon-close.png) no-repeat;
+}
+/* line 160, app/styles/app.scss */
+.nav .new {
+  float: right;
+  width: 15.5px;
+  height: 15.5px;
+  margin: 14px 9px 0 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/icon-new.png) no-repeat;
+}
+/* line 170, app/styles/app.scss */
+.nav .setting {
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin: 14px 9px 0 0;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/setting.png) no-repeat;
+}
+/* line 180, app/styles/app.scss */
+.nav h2 {
+  position: absolute;
+  left: 45px;
+  top: 0;
+  width: calc(100% - 90px);
+  text-align: center;
+  font-size: 18px;
+}
+/* line 188, app/styles/app.scss */
+.nav .oper-top {
+  width: 45px;
+  text-align: center;
+  float: right;
+  font-size: 15px;
+  color: #a0ce3d;
+}
+/* line 194, app/styles/app.scss */
+.nav .oper-top.unavailabl {
+  color: #a1a1a1;
+}
+
+/* line 199, app/styles/app.scss */
+.status-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #dedede;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 206, app/styles/app.scss */
+.status-bar .tab {
+  margin: 0 3px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #a0ce3d;
+  border-radius: 5px;
+}
+/* line 212, app/styles/app.scss */
+.status-bar .tab ul {
+  *zoom: 1;
+}
+/* line 6, app/styles/_common.scss */
+.status-bar .tab ul:before, .status-bar .tab ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, app/styles/_common.scss */
+.status-bar .tab ul:after {
+  clear: both;
+}
+/* line 215, app/styles/app.scss */
+.status-bar .tab ul li {
+  width: 25%;
+  float: left;
+  font-size: 13px;
+  text-align: center;
+  color: #87bb12;
+  border-right: 1px solid #87bb12;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 224, app/styles/app.scss */
+.status-bar .tab ul li:last-child {
+  border-right: none;
+}
+/* line 227, app/styles/app.scss */
+.status-bar .tab ul li.cur {
+  color: white;
+  background-color: #87bb12;
+}
+/* line 234, app/styles/app.scss */
+.status-bar p.list-tip-info {
+  font-size: 14px;
+  padding: 0 9px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #efefef;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 245, app/styles/app.scss */
+.con-wraper {
+  background-color: white;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+/* line 249, app/styles/app.scss */
+.con-wraper.mar-top {
+  margin-top: 20px;
+}
+
+/* line 253, app/styles/app.scss */
+.simple-table {
+  width: calc(100% - 9px);
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 258, app/styles/app.scss */
+.simple-table th,
+.simple-table td {
+  line-height: 39px;
+  border: 1px solid #dedede;
+  text-align: center;
+}
+
+/* line 265, app/styles/app.scss */
+.table-info-more {
+  line-height: 30px;
+  font-size: 15px;
+  padding: 0 9px;
+}
+
+/* line 270, app/styles/app.scss */
+.btn {
+  height: 40px;
+  line-height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 276, app/styles/app.scss */
+.btn.green {
+  background-color: #a0ce3d;
+  color: white;
+}
+/* line 280, app/styles/app.scss */
+.btn.long {
+  width: 100%;
+}
+/* line 283, app/styles/app.scss */
+.btn.mid {
+  width: calc(100% - 54px);
+  margin: 0px auto;
+  border-radius: 3px;
+}
+/* line 1, app/styles/icons.scss */
+.icon-pro {
+  width: 60px;
+  height: 60px;
+  background: url(../images/icons.png) 0px 0px no-repeat;
+}
+/* line 4, app/views/index/view.scss */
+.state-diagram {
+  width: calc(100% - 6px);
+  margin: 3px auto 0;
+}
+/* line 7, app/views/index/view.scss */
+.state-diagram img {
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+}
+/* line 3, app/views/jindou/feedback/view.scss */
+.feedback {
+  padding: 5px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 6, app/views/jindou/feedback/view.scss */
+.feedback textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 14px;
+  border: none;
+}
+/* line 12, app/views/jindou/feedback/view.scss */
+.feedback .word-limit {
+  padding: 0 5px;
+  height: 20px;
+  line-height: 20px;
+  text-align: right;
+  font-size: 14px;
+  color: #888888;
+}
+/* line 20, app/views/jindou/feedback/view.scss */
+.feedback .btn {
+  position: absolute;
+  bottom: 10px;
+  margin: 0 27px;
+}
+/* line 3, app/views/jindou/index/view.scss */
+.jindou-wraper {
+  position: relative;
+  height: 180px;
+  background-size: 100%;
+  background: white url(../images/jindou-bg.png) no-repeat;
+  border-bottom: 1px solid #dedede;
+}
+/* line 9, app/views/jindou/index/view.scss */
+.jindou-wraper .my-jindou {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 35%;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: white;
+}
+/* line 18, app/views/jindou/index/view.scss */
+.jindou-wraper .my-jindou em {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+/* line 25, app/views/jindou/index/view.scss */
+.jindou-wraper .help {
+  position: absolute;
+  top: 50px;
+  right: 17%;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  background-color: white;
+  color: #f83d35;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 3px;
+}
+/* line 37, app/views/jindou/index/view.scss */
+.jindou-wraper .help .arrow-left {
+  border-top: 4px solid transparent;
+  border-right: 4px solid white;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  position: absolute;
+  top: 6px;
+  left: -8px;
+  content: "";
+}
+/* line 45, app/views/jindou/index/view.scss */
+.jindou-wraper .menu {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+}
+/* line 50, app/views/jindou/index/view.scss */
+.jindou-wraper .menu ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.jindou-wraper .menu ul:before, .jindou-wraper .menu ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.jindou-wraper .menu ul:after {
+  clear: both;
+}
+/* line 53, app/views/jindou/index/view.scss */
+.jindou-wraper .menu ul li {
+  float: left;
+  width: 50%;
+  height: 56px;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 59, app/views/jindou/index/view.scss */
+.jindou-wraper .menu ul li em.icon-receive,
+.jindou-wraper .menu ul li em.icon-cost {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+/* line 69, app/views/jindou/index/view.scss */
+.jindou-wraper .menu ul li em.icon-receive {
+  background: url(../images/icon-receive.png) no-repeat;
+}
+/* line 72, app/views/jindou/index/view.scss */
+.jindou-wraper .menu ul li em.icon-cost {
+  background: url(../images/icon-cost.png) no-repeat;
+}
+
+/* line 79, app/views/jindou/index/view.scss */
+.jindou {
+  background-color: white;
+  margin-top: 15px;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+/* line 84, app/views/jindou/index/view.scss */
+.jindou .mingxi {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: 14px;
+  color: #888888;
+  border-bottom: 1px solid #dedede;
+}
+/* line 91, app/views/jindou/index/view.scss */
+.jindou .mingxi em.more {
+  float: right;
+  width: 8px;
+  height: 12.5px;
+  margin: 9px 10px 0 0px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/more.png) no-repeat;
+}
+/* line 102, app/views/jindou/index/view.scss */
+.jindou ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.jindou ul:before, .jindou ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.jindou ul:after {
+  clear: both;
+}
+/* line 105, app/views/jindou/index/view.scss */
+.jindou ul li {
+  padding: 0px 15px;
+  height: 65px;
+  color: #888888;
+  border-bottom: 1px solid #dedede;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 112, app/views/jindou/index/view.scss */
+.jindou ul li:last-child {
+  border-bottom: none;
+}
+/* line 115, app/views/jindou/index/view.scss */
+.jindou ul li:first-child {
+  border-bottom: 1px solid #dedede;
+}
+/* line 119, app/views/jindou/index/view.scss */
+.jindou ul li .fl > p {
+  font-size: 16px;
+  display: block;
+  color: #3b3b3b;
+  line-height: 40px;
+}
+/* line 126, app/views/jindou/index/view.scss */
+.jindou ul li .fr {
+  line-height: 65px;
+  font-size: 16px;
+  color: #f83d35;
+}
+/* line 5, app/views/list-edit/view.scss */
+.list-edit .icon-delete {
+  float: left;
+  width: 22px;
+  height: 24px;
+  margin: 15px 5px 0 0px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/icon-delete.png) no-repeat;
+}
+/* line 15, app/views/list-edit/view.scss */
+.list-edit .btn-delete {
+  display: none;
+  float: right;
+  width: 75px;
+  height: 55px;
+  margin: 0 -3px 0 0px;
+  background-color: #fc3e39;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+/* line 3, app/views/manage/index/view.scss */
+.search-bar {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #dedede;
+  background-color: #eee;
+  overflow: hidden;
+}
+/* line 10, app/views/manage/index/view.scss */
+.search-bar .input-wraper {
+  width: calc(100% - 18px);
+  height: 30px;
+  background-color: white;
+  border-radius: 3px;
+  margin: 5px auto 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 18, app/views/manage/index/view.scss */
+.search-bar .input-wraper em.icon-search {
+  float: left;
+  width: 16.5px;
+  height: 16.5px;
+  margin: 6px 5px 0 10px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/icon-search.png) no-repeat;
+}
+/* line 28, app/views/manage/index/view.scss */
+.search-bar .input-wraper input {
+  float: left;
+  width: calc(100% - 32px);
+  padding: 0 5px;
+  height: 30px;
+  font-size: 13px;
+  border: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* line 41, app/views/manage/index/view.scss */
+.record-list dl {
+  height: 60px;
+  padding: 7px 0;
+  margin-left: 9px;
+  border-bottom: 1px solid #dedede;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 49, app/views/manage/index/view.scss */
+.record-list dl dt {
+  float: left;
+}
+/* line 51, app/views/manage/index/view.scss */
+.record-list dl dt img {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin: 0px 10px 0 0;
+}
+/* line 58, app/views/manage/index/view.scss */
+.record-list dl dd {
+  position: relative;
+  float: right;
+  width: calc(100% - 55px);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 64, app/views/manage/index/view.scss */
+.record-list dl dd b {
+  display: block;
+  font-size: 15px;
+  line-height: 24px;
+}
+/* line 69, app/views/manage/index/view.scss */
+.record-list dl dd p {
+  font-size: 12px;
+  color: #888888;
+}
+/* line 73, app/views/manage/index/view.scss */
+.record-list dl dd em.more {
+  position: absolute;
+  right: 9px;
+  top: 18px;
+  width: 8px;
+  height: 12.5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/more.png) no-repeat;
+}
+/* line 4, app/views/new-data/view.scss */
+ul.new-data {
+  border-bottom: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+ul.new-data:before, ul.new-data:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+ul.new-data:after {
+  clear: both;
+}
+/* line 9, app/views/new-data/view.scss */
+ul.new-data li {
+  height: 55px;
+  line-height: 55px;
+  margin-left: 9px;
+  font-size: 15px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 15, app/views/new-data/view.scss */
+ul.new-data li:last-child {
+  border-bottom: none;
+}
+/* line 18, app/views/new-data/view.scss */
+ul.new-data li .fl {
+  color: #a1a1a1;
+}
+/* line 21, app/views/new-data/view.scss */
+ul.new-data li input.fr,
+ul.new-data li select.fr {
+  height: 55px;
+  line-height: 55px;
+  margin-right: 9px;
+  text-align: right;
+  border: none;
+  color: #3b3b3b;
+  font-size: 15px;
+}
+/* line 31, app/views/new-data/view.scss */
+ul.new-data li ::-webkit-input-placeholder {
+  color: #3b3b3b;
+}
+/* line 4, app/views/new-symptoms/view.scss */
+.new-symptoms {
+  margin-top: 0;
+  width: 100%;
+}
+/* line 8, app/views/new-symptoms/view.scss */
+.new-symptoms dl {
+  padding: 5px 0 15px 9px;
+}
+/* line 10, app/views/new-symptoms/view.scss */
+.new-symptoms dl dt {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 14, app/views/new-symptoms/view.scss */
+.new-symptoms dl dt span {
+  float: left;
+  font-size: 12px;
+  color: #a0ce3d;
+  padding-right: 20px;
+  border-bottom: 1px solid #a0ce3d;
+}
+/* line 23, app/views/new-symptoms/view.scss */
+.new-symptoms dl dd span {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 15px;
+  border: 1px solid #dedede;
+  margin: 10px 12px 0 0;
+}
+/* line 30, app/views/new-symptoms/view.scss */
+.new-symptoms dl dd span.selected {
+  background-color: #a0ce3d;
+  border-color: #a0ce3d;
+  color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 37, app/views/new-symptoms/view.scss */
+.new-symptoms dl dd textarea {
+  width: calc(100% - 9px);
+  height: 58px;
+  background-color: #f6f6f8;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+/* line 47, app/views/new-symptoms/view.scss */
+.new-symptoms .btn {
+  margin-top: 10px;
+}
+/* line 4, app/views/personal-center/index/view.scss */
+.personal-center .user-info {
+  position: relative;
+  height: 146px;
+  background-size: 100%;
+  background: url(../images/person-bg.png) no-repeat;
+}
+/* line 9, app/views/personal-center/index/view.scss */
+.personal-center .user-info .user-img {
+  z-index: 2000;
+  position: absolute;
+  top: 8px;
+  left: 40%;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  border: 2px solid white;
+  margin: 15px auto 0;
+  overflow: hidden;
+}
+/* line 20, app/views/personal-center/index/view.scss */
+.personal-center .user-info .user-img img {
+  width: 70px;
+  height: 70px;
+}
+/* line 25, app/views/personal-center/index/view.scss */
+.personal-center .user-info .user-txt {
+  z-index: 2100;
+  position: absolute;
+  bottom: 5px;
+  left: 25%;
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+/* line 33, app/views/personal-center/index/view.scss */
+.personal-center .user-info .user-txt p {
+  font-size: 14px;
+}
+/* line 35, app/views/personal-center/index/view.scss */
+.personal-center .user-info .user-txt p:first-child {
+  font-size: 16px;
+}
+/* line 41, app/views/personal-center/index/view.scss */
+.personal-center ul {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.personal-center ul:before, .personal-center ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.personal-center ul:after {
+  clear: both;
+}
+/* line 46, app/views/personal-center/index/view.scss */
+.personal-center ul li {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+/* line 50, app/views/personal-center/index/view.scss */
+.personal-center ul li em.icon-card,
+.personal-center ul li em.icon-bean,
+.personal-center ul li em.icon-complaint,
+.personal-center ul li em.icon-pay {
+  float: left;
+  width: 19px;
+  height: 19px;
+  margin: 13px 30px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+/* line 62, app/views/personal-center/index/view.scss */
+.personal-center ul li em.icon-card {
+  background: url(../images/card.png) no-repeat;
+}
+/* line 65, app/views/personal-center/index/view.scss */
+.personal-center ul li em.icon-bean {
+  background: url(../images/bean.png) no-repeat;
+}
+/* line 68, app/views/personal-center/index/view.scss */
+.personal-center ul li em.icon-complaint {
+  background: url(../images/complaint.png) no-repeat;
+}
+/* line 71, app/views/personal-center/index/view.scss */
+.personal-center ul li em.icon-pay {
+  background: url(../images/pay.png) no-repeat;
+}
+/* line 74, app/views/personal-center/index/view.scss */
+.personal-center ul li span {
+  position: relative;
+  float: left;
+  width: calc(100% - 80px);
+  border-bottom: 1px solid #dedede;
+  font-size: 16px;
+}
+/* line 81, app/views/personal-center/index/view.scss */
+.personal-center ul li em.more {
+  float: right;
+  width: 8px;
+  height: 12.5px;
+  margin: 16px 10px 0 0px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/more.png) no-repeat;
+}
+/* line 92, app/views/personal-center/index/view.scss */
+.personal-center ul li:last-child span {
+  border-bottom: none;
+}
+/* line 4, app/views/personal-center/login/view.scss */
+.login ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.login ul:before, .login ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.login ul:after {
+  clear: both;
+}
+/* line 7, app/views/personal-center/login/view.scss */
+.login ul li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 12, app/views/personal-center/login/view.scss */
+.login ul li em.icon-login-user,
+.login ul li em.icon-login-key {
+  float: left;
+  width: 11px;
+  height: 16px;
+  margin: 15px 25px 0 34px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
+/* line 22, app/views/personal-center/login/view.scss */
+.login ul li em.icon-login-user {
+  background: url(../images/icon-login-user.png) no-repeat;
+}
+/* line 25, app/views/personal-center/login/view.scss */
+.login ul li em.icon-login-key {
+  background: url(../images/icon-login-key.png) no-repeat;
+}
+/* line 28, app/views/personal-center/login/view.scss */
+.login ul li input {
+  float: left;
+  width: calc(100% - 100px);
+  border: none;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 39, app/views/personal-center/login/view.scss */
+.login .btn {
+  font-size: 17px;
+  margin-top: 60px;
+}
+/* line 43, app/views/personal-center/login/view.scss */
+.login .forget-password {
+  text-align: center;
+  margin: 15px auto;
+  font-size: 14px;
+  color: #888888;
+}
+/* line 4, app/views/personal-center/register/view.scss */
+.register ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.register ul:before, .register ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.register ul:after {
+  clear: both;
+}
+/* line 7, app/views/personal-center/register/view.scss */
+.register ul li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 12, app/views/personal-center/register/view.scss */
+.register ul li em {
+  float: left;
+  width: 80px;
+  text-align: left;
+  padding-left: 15px;
+}
+/* line 18, app/views/personal-center/register/view.scss */
+.register ul li input {
+  float: left;
+  width: calc(100% - 100px);
+  border: none;
+  height: 45px;
+  line-height: 45px;
+  font-size: 14px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 27, app/views/personal-center/register/view.scss */
+.register ul li input.input-w {
+  width: calc(100% - 200px);
+}
+/* line 31, app/views/personal-center/register/view.scss */
+.register ul li .yzm {
+  float: right;
+  width: 100px;
+  background-color: #faa600;
+  color: white;
+  text-align: center;
+}
+/* line 40, app/views/personal-center/register/view.scss */
+.register .btn {
+  font-size: 17px;
+  margin-top: 60px;
+}
+/* line 4, app/views/xuetang-list/view.scss */
+.xuetang-list p.list-tip-info {
+  line-height: 50px;
+}
+
+/* line 8, app/views/xuetang-list/view.scss */
+.list-img-txt {
+  width: calc(100% - 6px);
+  margin: 0 auto;
+}
+/* line 11, app/views/xuetang-list/view.scss */
+.list-img-txt ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.list-img-txt ul:before, .list-img-txt ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.list-img-txt ul:after {
+  clear: both;
+}
+/* line 14, app/views/xuetang-list/view.scss */
+.list-img-txt ul li {
+  height: 55px;
+  line-height: 55px;
+  font-size: 15px;
+  padding: 0 0px 0 6px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 23, app/views/xuetang-list/view.scss */
+.list-img-txt ul li img {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin: 12px 10px 0 0;
+}
+/* line 29, app/views/xuetang-list/view.scss */
+.list-img-txt ul li span.fr {
+  color: #949494;
+  margin-right: 5px;
+}
+/* line 33, app/views/xuetang-list/view.scss */
+.list-img-txt ul li em.more {
+  float: right;
+  width: 8px;
+  height: 12.5px;
+  margin: 21px 10px 0 0px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/more.png) no-repeat;
+}
+/* line 3, app/views/xuetang/view.scss */
+.list-txt {
+  width: calc(100% - 6px);
+  margin: 3px auto 0;
+}
+/* line 6, app/views/xuetang/view.scss */
+.list-txt ul {
+  *zoom: 1;
+}
+/* line 6, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.list-txt ul:before, .list-txt ul:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+/* line 12, /Users/amanda/Documents/workspace/jz/app/styles/_common.scss */
+.list-txt ul:after {
+  clear: both;
+}
+/* line 9, app/views/xuetang/view.scss */
+.list-txt ul li {
+  position: relative;
+  height: 55px;
+  line-height: 55px;
+  font-size: 15px;
+  padding: 0 25px 0 6px;
+  border-bottom: 1px solid #dedede;
+}
+/* line 19, app/views/xuetang/view.scss */
+.list-txt ul li em.more {
+  position: absolute;
+  right: 9px;
+  top: 21px;
+  width: 8px;
+  height: 12.5px;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background: url(../images/more.png) no-repeat;
+}
+
+/* line 34, app/views/xuetang/view.scss */
+.xuetang h3 {
+  margin-top: 20px;
+}
+
+/* line 38, app/views/xuetang/view.scss */
+h3 {
+  padding: 0 9px;
+  font-size: 15px;
+  line-height: 30px;
+}

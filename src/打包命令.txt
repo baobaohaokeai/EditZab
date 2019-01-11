@@ -1,0 +1,1 @@
+jar cvf zabbix_060612_source.jar com/

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.roof.report.common.dao">
+	<sql id="columns">
+		t.id, t.name, t.value, t.isShow
+	</sql>
+
+	<select id="loadAreaCompany" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_type t
+	</select>
+
+	<select id="loadCountyCompany" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadSubOffice" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadCustomerProp" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadCustomerLevel" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadMarketServiceType" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadHaltType" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadDept" resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+	</select>
+	
+	<select id="loadItemByType" parameterType="java.util.Map"  resultType="org.roof.report.common.entity.Option">
+		select
+		<include refid="columns" />
+		from report_item i
+		join report_type t on i.typeId = t.id
+		where i.isShow = 1 and t.isShow = 1
+		<if test="id != null">
+			and t.id = #{id}
+		</if>
+		order by i.seq 
+	</select>
+	
+</mapper>

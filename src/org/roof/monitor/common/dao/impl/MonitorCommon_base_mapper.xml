@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.roof.monitor.common.dao">
+	<sql id="typeColumns">
+		t.id, t.typeName, t.typeValue, t.isShow
+	</sql>
+	<sql id="itemColumns">
+		i.id, i.itemName, i.itemKey, i.resultType, i.isShow
+	</sql>
+
+	<select id="loadType" resultType="org.roof.monitor.common.entity.MonitorType">
+		select
+		<include refid="typeColumns" />
+		from monitor_type t
+	</select>
+
+	<select id="loadItem" resultType="org.roof.monitor.common.entity.MonitorItem">
+		select
+		<include refid="itemColumns" />
+		from monitor_item i
+	</select>
+	
+	<select id="loadItemByType" parameterType="java.util.Map"  resultType="org.roof.monitor.common.entity.MonitorItem">
+		select
+		<include refid="itemColumns" />
+		from monitor_item i
+		join monitor_type t on i.typeId = t.id
+		where i.isShow = 1 and t.isShow = 1
+		<if test="id != null">
+			and t.id = #{id}
+		</if>
+		<if test="value != null">
+			and t.value = #{value}
+		</if>
+		<if test="name != null">
+			and t.name = #{name}
+		</if>
+		order by i.seq 
+	</select>
+	
+	<select id="loadHotItem" parameterType="java.util.Map"  resultType="org.roof.monitor.common.entity.MonitorItem">
+		select
+		<include refid="itemColumns" />
+		from monitor_item i
+		join monitor_type t on i.typeId = t.id
+		where i.isShow = 1 and i.isHot = 1 and t.isShow = 1
+		order by i.seq 
+	</select>
+</mapper>
